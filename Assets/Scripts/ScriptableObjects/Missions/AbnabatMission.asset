@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8a1822c626894244863e2f91827ebef, type: 3}
+  m_Name: AbnabatMission
+  m_EditorClassIdentifier: 
+  Level: 0
+  selectIndex: 0
+  Item: {fileID: 11400000, guid: f9288801f8e20bb41a217289cafcaeaf, type: 2}
+  Description: "\u0622\u0628\u0646\u0628\u0627\u062A"
+  randomRequiredNumber: {x: 1, y: 5}
+  Id: e03d3cb7-4413-42bd-a2bc-715c90276ccb
