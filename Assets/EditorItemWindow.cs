@@ -9,12 +9,30 @@ public class EditorItemWindow : Singleton<EditorItemWindow>
 private Items Items;
 public GameObject ItemPrefab;
 public Transform editorWindow;
+public ItemContainer currentItemContainer;
 public List<ItemSC> UsedItems;
 public List<GameObject> InventoryItems;
 
 private void Start() {
     Items = GetComponent<Items>();
     InitializeItems();
+}
+
+/// <summary>
+/// اعمال کردن آیتم های استفاده شده
+/// </summary>
+/// <param name="ItemContainer"></param>
+public void SetUsedItems(ItemContainer ItemContainer){
+currentItemContainer = ItemContainer;
+UsedItems = ItemContainer.Items;
+}
+
+/// <summary>
+/// پاک کردن محتویات لیست آیتم های استفاده شده
+/// </summary>
+public void ResetUsedItemsList(){
+UsedItems.Clear();
+currentItemContainer.Items.Clear();
 }
 
 /// <summary>

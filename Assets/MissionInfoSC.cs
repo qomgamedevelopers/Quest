@@ -2,12 +2,13 @@
 using NaughtyAttributes;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "MissionInfoSC", menuName = "DailyRequest/MissionInfoSC", order = 0)]
-public class MissionInfo : ScriptableObject {
+[CreateAssetMenu(fileName = "Level", menuName = "Quest/Level", order = 0)]
+public class MissionInfoSC : ScriptableObject {
 //public GameObject misionPrefab;
 [System.Serializable]
 public class Mission{
 public ItemSC ItemSC;
+public string Title,Description;
 
 public int requiredNumber;
 
@@ -46,7 +47,7 @@ public List<Reward> Rewards = new List<Reward>();
 }
 
 [ReorderableList]
-public List<Quest> questList;    
+public List<Quest> questList = new List<Quest>();    
 
 [Button]
 public void AddQuest(){
@@ -80,12 +81,14 @@ public void AddReward(int _questIndex,Reward _reward){
 questList[_questIndex].Rewards.Add(_reward);
 }
 
-public void UpdateQuestInfo(int _questIndex,int _missionIndex,int _number){
+public void UpdateQuestInfo(int _questIndex,int _missionIndex,int _number,ItemSC ItemSC){
     questList[_questIndex].Missions[_missionIndex].requiredNumber = _number;
+    questList[_questIndex].Missions[_missionIndex].ItemSC = ItemSC;
 }
 
-public void UpdateRewardInfo(int _questIndex,int _rewardIndex,int _number){
+public void UpdateRewardInfo(int _questIndex,int _rewardIndex,int _number,ItemSC ItemSC){
     questList[_questIndex].Rewards[_rewardIndex].Score = _number;
+    questList[_questIndex].Rewards[_rewardIndex].ItemSC = ItemSC;
 }
 
 

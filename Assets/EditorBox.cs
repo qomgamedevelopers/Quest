@@ -18,11 +18,14 @@ public ItemSC ItemInfo;
 
 public string Type;
 
+public bool IsChangeItem;
+
 
 private void Start() {
-    GetComponent<Button>().onClick.AddListener(()=>EditorWindowManager.Instance.SetSelection(gameObject));
+    GetComponent<Button>().onClick.AddListener(()=>{EditorWindowManager.Instance.SetSelection(gameObject);EditorItemWindow.Instance.ResetUsedItemsList(); IsChangeItem = true;});
+    
 
-        if(ItemInfo != null){
+    if(ItemInfo != null){
     if(Type == "Mission"){
     Number = EditorWindowManager.Instance.missionInfo.GetQuestInfo(missionDesign.missionIndex,Index);
     }else if(Type == "Reward"){
@@ -39,11 +42,16 @@ private void Start() {
 public void SetItemInfo(ItemSC ItemSC){
     ItemInfo = ItemSC;
     Image.sprite = ItemInfo.Sprite;
+    Image.SetNativeSize();
+    if(IsChangeItem){
+        IsChangeItem = false;
+        return;
+    }
     if(Type == "Mission"){
-    MissionInfo.Mission _mission = new MissionInfo.Mission(ItemInfo,Number);
+    MissionInfoSC.Mission _mission = new MissionInfoSC.Mission(ItemInfo,Number);
     EditorWindowManager.Instance.missionInfo.AddMission(missionDesign.missionIndex,_mission);
     }else if(Type == "Reward"){
-    MissionInfo.Reward _reward = new MissionInfo.Reward(ItemInfo,Number);
+    MissionInfoSC.Reward _reward = new MissionInfoSC.Reward(ItemInfo,Number);
     EditorWindowManager.Instance.missionInfo.AddReward(missionDesign.missionIndex,_reward);    
     }
     Image.SetNativeSize();
@@ -59,9 +67,9 @@ private void Update() {
 
     if(ItemInfo != null){
     if(Type == "Mission"){
-    EditorWindowManager.Instance.missionInfo.UpdateQuestInfo(missionDesign.missionIndex,Index,Number);
+    EditorWindowManager.Instance.missionInfo.UpdateQuestInfo(missionDesign.missionIndex,Index,Number,ItemInfo);
     }else if(Type == "Reward"){
-    EditorWindowManager.Instance.missionInfo.UpdateRewardInfo(missionDesign.missionIndex,Index,Number);
+    EditorWindowManager.Instance.missionInfo.UpdateRewardInfo(missionDesign.missionIndex,Index,Number,ItemInfo);
     }
     }
     

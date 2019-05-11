@@ -6,9 +6,14 @@ public class ItemContainer : MonoBehaviour
 {
     // TODO optimising
 public List<ItemSC> Items;
+//public bool shouldFindUsedItem;
 
 private void Update() {
+// if(shouldFindUsedItem){
 FindUsedItem();
+// }else{
+// Items.Clear();    
+// }
 }
 
 public void FindUsedItem(){
@@ -22,6 +27,6 @@ Items.Add(item.gameObject.GetComponent<EditorBox>().ItemInfo);
 }
 
 public void AddToUsedItems(){
-    EditorItemWindow.Instance.UsedItems = Items;
+    EditorItemWindow.Instance.SetUsedItems(this);
 }
 }
