@@ -13,6 +13,7 @@ public Button questAddButton,rewardAddButton;
 public TextMeshProUGUI questText,rewardText;
 
 public InputField titleText,descriptionText;
+public Number QueueNumber;
 public GameObject Prefab;
 public int questIndexCounter;
 public int rewardIndexCounter;
@@ -20,11 +21,13 @@ public int rewardIndexCounter;
 public int missionIndex;
 
 private void Start() {
-    questText.text += " " + missionIndex.ToString();
-    rewardText.text += " " + missionIndex.ToString();
-
-titleText.text = EditorWindowManager.Instance.missionInfo.questList[missionIndex].Missions[0].Title;
-descriptionText.text = EditorWindowManager.Instance.missionInfo.questList[missionIndex].Missions[0].Description;
+questText.text += " " + missionIndex.ToString();
+rewardText.text += " " + missionIndex.ToString();
+QueueNumber.number = EditorWindowManager.Instance.missionInfo.questList[missionIndex].groupID;
+print(EditorWindowManager.Instance.missionInfo.questList[missionIndex].groupID.ToString());
+EditorWindowManager.Instance.missionInfo.questList[missionIndex].Index = missionIndex;  
+titleText.text = EditorWindowManager.Instance.missionInfo.questList[missionIndex].Title;
+descriptionText.text = EditorWindowManager.Instance.missionInfo.questList[missionIndex].Description;
 
     foreach (var item in EditorWindowManager.Instance.missionInfo.questList[missionIndex].Missions)
     {
@@ -38,8 +41,9 @@ descriptionText.text = EditorWindowManager.Instance.missionInfo.questList[missio
 }
 
 private void Update() {
-EditorWindowManager.Instance.missionInfo.questList[missionIndex].Missions[0].Title = titleText.text;
-EditorWindowManager.Instance.missionInfo.questList[missionIndex].Missions[0].Description = descriptionText.text;
+EditorWindowManager.Instance.missionInfo.questList[missionIndex].Title = titleText.text;
+EditorWindowManager.Instance.missionInfo.questList[missionIndex].Description = descriptionText.text;
+EditorWindowManager.Instance.missionInfo.questList[missionIndex].groupID = QueueNumber.number;
 }
 
 public void AddQuest(){

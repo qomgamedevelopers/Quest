@@ -253,7 +253,7 @@ GameObject:
   - component: {fileID: 8097420389805489862}
   - component: {fileID: 8097420389805489863}
   m_Layer: 5
-  m_Name: MissionDescription
+  m_Name: MissionTitle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -643,7 +643,7 @@ GameObject:
   - component: {fileID: 8097420390575955092}
   - component: {fileID: 8097420390575955094}
   m_Layer: 5
-  m_Name: Mission
+  m_Name: MissionTab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -721,9 +721,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bda8eb17d753a104baa15216fa920bf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredNumber: 0
   ItemImage: {fileID: 8097420388713923359}
-  dailyMissionSC: {fileID: 11400000, guid: 835a7ac5b5701584da761e0e117986b1, type: 2}
   RequiredText: {fileID: 8097420389697532125}
-  DescriptionText: {fileID: 8097420389805489863}
+  TitleText: {fileID: 0}
+  ItemNameText: {fileID: 8097420389805489863}
+  DescriptionText: {fileID: 0}
   Tick: {fileID: 8097420390226754142}

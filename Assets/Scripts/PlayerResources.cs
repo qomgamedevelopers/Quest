@@ -36,4 +36,18 @@ return item;
 }
 return null;
 }
+
+/// <summary>
+/// اضافه کردن میزان آیتم
+/// </summary>
+/// <param name="_name"></param>
+/// <param name="_value"></param>
+public void AddItemNumber(string _name,int _value){
+foreach (var item in ResourceList)
+{
+if(_name == item.Item.Name){
+item.Number += _value;
+}
+}
+}
 }

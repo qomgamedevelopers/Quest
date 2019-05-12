@@ -6,11 +6,16 @@ using UnityEngine.UI;
 
 public class Reward : MonoBehaviour
 {
+public ItemSC ItemSC;
 public Image ItemSprite;
 public RTLTextMeshPro Text;
-public int RequiredItem;
+public int Score;
 
 private void Start() {
-    Text.text = RequiredItem.ToString();
+    Text.text = Score.ToString();
+    ItemSprite.sprite = ItemSC.Sprite;
+}
+public void ClaimReward(){
+PlayerResources.Instance.AddItemNumber(ItemSC.Name,Score);
 }
 }

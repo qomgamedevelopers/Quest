@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sprite: {fileID: 21300000, guid: f973c195c8d1a2d41a8a6bdf10e00d1a, type: 3}
   Name: Potato
-  persianName: 
+  persianName: "\u0633\u064A\u0628 \u0632\u0645\u064A\u0646\u064A"
   sellPrice: 0
   Id: 480cfdad-d20e-463b-83bb-7659b6b149e8

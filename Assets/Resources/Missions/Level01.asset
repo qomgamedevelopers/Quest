@@ -12,4 +12,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20c4d18168bf5344c9ee234f829da607, type: 3}
   m_Name: Level01
   m_EditorClassIdentifier: 
-  questList: []
+  questList:
+  - Title: "\u0645\u0627\u062F\u0631\u0628\u0632\u0631\u06AF"
+    Description: "\u0645\u0627\u062F\u0631\u0628\u0632\u0631\u06AF \u0628\u0631\u0627\u064A
+      \u062C\u0645\u0639\u0647 \u0645\u064A \u062E\u0648\u0627\u062F \u0622\u0634
+      \u0646\u0630\u0631\u064A \u0628\u062F\u0647 \u064A\u062E\u062F\u0647 \u0686\u064A\u0632
+      \u0645\u064A\u0632 \u0646\u064A\u0627\u0632 \u062F\u0627\u0631\u064A\u0645"
+    Missions:
+    - ItemSC: {fileID: 11400000, guid: f9288801f8e20bb41a217289cafcaeaf, type: 2}
+      requiredNumber: 14
+    Rewards:
+    - ItemSC: {fileID: 11400000, guid: 8f69fbb4297fdcf46bf429dcb0b7e337, type: 2}
+      Score: 6
+    - ItemSC: {fileID: 11400000, guid: 2db775d40f966be4b992f693bbee2f4b, type: 2}
+      Score: 6
+  - Title: "\u062D\u0627\u062C \u06A9\u0631\u064A\u0645"
+    Description: "\u062D\u0627\u062C \u06A9\u0631\u064A\u0645 \u06AF\u0633\u0646\u0634\u0647
+      \u064A\u062E\u062F\u0647 \u0686\u064A\u0632 \u0645\u064A\u0632 \u0645\u064A
+      \u062E\u0648\u0627\u064A\u0645"
+    Missions:
+    - ItemSC: {fileID: 11400000, guid: 9185705f02ba214488ef9698efe8e2d6, type: 2}
+      requiredNumber: 7
+    Rewards:
+    - ItemSC: {fileID: 11400000, guid: 44a3b2fb7e9c9b344a50b488d1bc587c, type: 2}
+      Score: 7
+  questQueue:
+  - quests: 00000000
+  - quests: 01000000

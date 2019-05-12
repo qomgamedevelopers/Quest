@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.0000134, y: -44.759995}
+  m_AnchoredPosition: {x: -2.0000134, y: -27.3}
   m_SizeDelta: {x: 54.16, y: 12.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4092478148476847360
@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: 5208104670455253108}
   - component: {fileID: 4584057098441588974}
   m_Layer: 5
-  m_Name: Reward
+  m_Name: RewardTab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -255,8 +255,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66e5d366159090c47a26e9c95b78926c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Text: {fileID: 4092478148476847361}
   ItemSprite: {fileID: 5208104671719161598}
+  Text: {fileID: 4092478148476847361}
+  RequiredItem: 0
 --- !u!1 &5208104671268801420
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,7 +292,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.7, y: -44.2}
+  m_AnchoredPosition: {x: -1.7, y: -26.8}
   m_SizeDelta: {x: 64.975, y: 21}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5208104671268801417
@@ -365,7 +366,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.6499953, y: -4.5}
+  m_AnchoredPosition: {x: -1.7, y: 11.1}
   m_SizeDelta: {x: 46.94, y: 46.94}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5208104671719161597

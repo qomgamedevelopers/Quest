@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Coin
   m_EditorClassIdentifier: 
   Sprite: {fileID: 21300000, guid: ee5a13fa21fd1d948953d66a8c7b9951, type: 3}
-  Name: 
-  persianName: 
+  Name: Coin
+  persianName: "\u0633\u06A9\u0647"
   sellPrice: 0
   Id: 641dce54-85a7-4ba1-9468-7f0457faa327

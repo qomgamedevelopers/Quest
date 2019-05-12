@@ -5,10 +5,11 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Level", menuName = "Quest/Level", order = 0)]
 public class MissionInfoSC : ScriptableObject {
 //public GameObject misionPrefab;
+
+
 [System.Serializable]
 public class Mission{
 public ItemSC ItemSC;
-public string Title,Description;
 
 public int requiredNumber;
 
@@ -39,6 +40,10 @@ Score = _score;
 }
 [System.Serializable]
 public class Quest{
+public int groupID;
+public int Index;
+
+public string Title,Description;
 public List<Mission> Missions = new List<Mission>();
 public List<Reward> Rewards = new List<Reward>();
 
@@ -49,12 +54,14 @@ public List<Reward> Rewards = new List<Reward>();
 [ReorderableList]
 public List<Quest> questList = new List<Quest>();    
 
-[Button]
+
+
+// [Button]
 public void AddQuest(){
     questList.Add(new Quest());
 }
 
-[Button]
+// [Button]
 public void Clear(){
     questList.Clear();
 }
