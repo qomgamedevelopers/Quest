@@ -3,8 +3,8 @@ using UnityEngine;
 
 [CreateAssetMenu(fileName = "Item", menuName = "Item", order = 0)]
 public class ItemSC : ScriptableObject {
-	public Sprite Sprite;
 	public string Name;
+	public Sprite Sprite;
 	public string persianName;
 	public float sellPrice;
 	public string Id;
@@ -19,6 +19,10 @@ public class ItemSC : ScriptableObject {
 	#if UNITY_EDITOR
 	UnityEditor.EditorUtility.SetDirty(this);
 	#endif
+	}
+
+	public virtual void ItemAction(){
+
 	}
 
 }

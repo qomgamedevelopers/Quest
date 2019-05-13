@@ -68,7 +68,6 @@ private void Start() {
     }
 
     private void Update() {
-
     for (int i = 0; i < missionPos.transform.childCount; i++)
     {
     missionPos.GetChild(i).GetComponent<DailyMissionUI>().SetItemInfo(currentMissionInfoSC().questList[questNumber],currentMissionInfoSC().questList[questNumber].Missions[i]);

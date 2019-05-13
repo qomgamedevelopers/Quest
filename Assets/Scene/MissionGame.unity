@@ -878,13 +878,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ResourceList:
   - Item: {fileID: 11400000, guid: f9288801f8e20bb41a217289cafcaeaf, type: 2}
-    Number: 0
+    Number: 30
   - Item: {fileID: 11400000, guid: 2db775d40f966be4b992f693bbee2f4b, type: 2}
-    Number: 0
+    Number: 30
   - Item: {fileID: 11400000, guid: 9185705f02ba214488ef9698efe8e2d6, type: 2}
-    Number: 0
+    Number: 30
   - Item: {fileID: 11400000, guid: 44a3b2fb7e9c9b344a50b488d1bc587c, type: 2}
-    Number: 0
+    Number: 30
 --- !u!114 &785363261
 MonoBehaviour:
   m_ObjectHideFlags: 0
