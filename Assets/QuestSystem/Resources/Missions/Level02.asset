@@ -16,11 +16,11 @@ MonoBehaviour:
   - groupID: 0
     Index: 0
     IsCountDown: 1
-    requiredTime: 20000
+    requiredTime: 5
     Title: "\u062D\u0627\u062C \u06A9\u0631\u064A\u0645"
     Description: "\u062F\u0627\u0686 \u064A\u062E\u062F\u0647 \u0686\u064A\u0632 \u0645\u064A
       \u062E\u0648\u0627\u0633\u062A\u0645"
-    personSC: {fileID: 11400000, guid: 555f3ed8728772d49a95edf0d45c8373, type: 2}
+    personSC: {fileID: 11400000, guid: 7d3814f8e10885749b62b6242cddc569, type: 2}
     Missions:
     - ItemSC: {fileID: 11400000, guid: f9288801f8e20bb41a217289cafcaeaf, type: 2}
       requiredNumber: 9
@@ -36,8 +36,8 @@ MonoBehaviour:
     IsCountDown: 0
     requiredTime: 0
     Title: "\u0634\u0635\u064A\u0634\u0635\u064A"
-    Description: 
-    personSC: {fileID: 11400000, guid: f190cd53ec8c95047b82dd91e1a6ad5d, type: 2}
+    Description: "\u0634\u064A\u0645 \u0622\u0646 \u064A\u0648"
+    personSC: {fileID: 11400000, guid: 3b428aa6bc64c81458558f188e14800d, type: 2}
     Missions:
     - ItemSC: {fileID: 11400000, guid: f9288801f8e20bb41a217289cafcaeaf, type: 2}
       requiredNumber: 9

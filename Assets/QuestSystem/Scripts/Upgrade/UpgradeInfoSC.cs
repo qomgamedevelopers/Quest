@@ -2,7 +2,7 @@
 using NaughtyAttributes;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "UpgradeReward", menuName = "Quest/UpgradeReward", order = 0)]
+[CreateAssetMenu(fileName = "UpgradeReward", menuName = "Quest/UpgradeReward", order = 2)]
 public class UpgradeInfoSC : ScriptableObject {
 //public GameObject misionPrefab;
 

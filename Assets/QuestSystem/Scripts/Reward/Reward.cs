@@ -9,6 +9,8 @@ public class Reward : MonoBehaviour
 public ItemSC ItemSC;
 public Image ItemSprite;
 public RTLTextMeshPro Text;
+public RTLTextMeshPro lossText;
+public GameObject lossObj;
 public int Score;
 
 private void Start() {
@@ -18,7 +20,8 @@ private void Start() {
 
 public void ReduceReward(){
     Score = (int)(Score*0.2f);
-    Text.text = Score.ToString();
+    lossObj.SetActive(true);
+    lossText.text = Score.ToString();
 }
 public void ClaimReward(){
 PlayerResources.Instance.AddItemNumber(ItemSC.Name,Score);

@@ -114,7 +114,9 @@ private void Start() {
      DescriptionText.text = currentMissionInfoSC().questList[questNumber].Description;
      customerPhoto.sprite = currentMissionInfoSC().questList[questNumber].personSC.Sprite;
      var requiredTime = currentMissionInfoSC().questList[questNumber].requiredTime;
+     if(!currentMissionCountDown().IsPreesedButton){
     currentMissionCountDown().Timer = requiredTime;
+     }
     countDownPreview.text = TimeConverter.GetClockTime(requiredTime);
 
 
@@ -147,11 +149,19 @@ private void Start() {
     }
 
     if(IsCompleteMission() && !ClaimReward){
-    Debug.Log("<color=yellow>Mission OComplete</color>");
+    Console.Log("Mission OComplete",Color.yellow);
+
+
     ClaimReward = true;
     OnCompleteMission.Invoke();
     }
-    claimRewardButton.gameObject.SetActive(IsCompleteMission());
+    if(IsCompleteMission()){
+    countDownText.gameObject.SetActive(false);
+    currentMissionCountDown().StopTimer();
+    claimRewardButton.gameObject.SetActive(true);
+    }else{
+    claimRewardButton.gameObject.SetActive(false);
+    }
 
     displayCountDown();
     }

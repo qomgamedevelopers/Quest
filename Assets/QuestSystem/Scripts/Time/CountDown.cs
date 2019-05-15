@@ -12,6 +12,7 @@ private float lastTime;
 public float Timer;
 
 public bool IsFinishedTimer;
+public UnityEvent OnFinishTimer;
 // public GameObject fastUpgradeButton;
 
 // private void OnDisable() {
@@ -36,13 +37,14 @@ private void Update()
       Timer -= Time.deltaTime;
       }else{
       Timer = 0;
-      if(!IsFinishedTimer){
-      IsFinishedTimer = true;
-      }
+      OnLateDelivery();
       }
    }
 
-   public virtual void OnFinishTimer(){
-
+   public virtual void OnLateDelivery(){
+   if(!IsFinishedTimer){
+   OnFinishTimer.Invoke();
+   IsFinishedTimer = true;
+   }
    }  
 }

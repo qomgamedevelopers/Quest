@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "PersonSC", menuName = "DailyRequest/PersonSC", order = 0)]
+[CreateAssetMenu(fileName = "PersonSC", menuName = "Quest/Person", order = 3)]
 public class PersonSC : ScriptableObject {
 	public string Name;
 	public Sprite Sprite;
